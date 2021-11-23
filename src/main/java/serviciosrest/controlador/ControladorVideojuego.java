@@ -64,7 +64,7 @@ public class ControladorVideojuego {
 	//el codigo 200 "OK" si existe o 404 NOT FOUND si no existe
 	
 	//La URL para acceder a este metodo sería: 
-	//"http://localhost:8080/videojuegos/ID" y el metodo a usar seria GET
+	//"http://localhost:8888/videojuegos/ID" y el metodo a usar seria GET
 	//ID sería el identificador que queremos buscar
 	@GetMapping(path="videojuegos/{id}",produces = MediaType.APPLICATION_JSON_VALUE)	
 	public ResponseEntity<Videojuego> getVideojuego(@PathVariable("id") int id) {
@@ -95,7 +95,7 @@ public class ControladorVideojuego {
 	//no se añadirá y se devolvera null y el codigo de respuesta 409 CONFLICT
 	
 	//La URL para acceder a este metodo sería: 
-	//"http://localhost:8080/videojuegos" y el metodo a usar seria POST
+	//"http://localhost:8888/videojuegos" y el metodo a usar seria POST
 	//Pasandole el videojuego sin el ID dentro del body del HTTP request
 	@PostMapping(path="videojuegos",consumes=MediaType.APPLICATION_JSON_VALUE,
 			produces=MediaType.APPLICATION_JSON_VALUE)
@@ -119,7 +119,7 @@ public class ControladorVideojuego {
 	//Si no devolvemos 404 NOT FOUND
 	
 	//La URL para acceder a este metodo sería: 
-	//"http://localhost:8080/videojuegos/ID" y el metodo a usar seria DELETE
+	//"http://localhost:8888/videojuegos/ID" y el metodo a usar seria DELETE
 	@DeleteMapping(path="videojuegos/{id}")
 	public ResponseEntity<Videojuego> borrarVideojuego(@PathVariable("id") int id) {
 		System.out.println("ID a borrar: " + id);
@@ -141,7 +141,7 @@ public class ControladorVideojuego {
 	//si el nombre ya existe en el set, devolvemos 409 CONFLICT
 	
 	//La URL para acceder a este metodo sería: 
-	//"http://localhost:8080/videojuegos/ID" y el metodo a usar seria PUT
+	//"http://localhost:8888/videojuegos/ID" y el metodo a usar seria PUT
 	//Pasandole el videojuego sin el ID dentro del body del HTTP request
 	@PutMapping(path="videojuegos/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Videojuego> modificarVideojuego(
@@ -175,9 +175,9 @@ public class ControladorVideojuego {
 	
 	//La URL para acceder a este metodo en caso de querer todas las videojuegos
 	//sería: 
-	//"http://localhost:8080/videojuegos" y el metodo a usar seria GET
+	//"http://localhost:8888/videojuegos" y el metodo a usar seria GET
 	//Si queremos filtrar por nombre entonces deberemos usar:
-	//"http://localhost:8080/videojuegos?nombre=NOMBRE_A_FILTRAR"
+	//"http://localhost:8888/videojuegos?nombre=NOMBRE_A_FILTRAR"
 	@GetMapping(path="videojuegos",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<HashSet<Videojuego>> listarVideojuegos(
 			@RequestParam(name="nombre",required=false) String nombre) {

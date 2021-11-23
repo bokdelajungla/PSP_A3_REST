@@ -4,7 +4,7 @@ package serviciosrest.modelo.entidad;
  * Clase Videojuego:
  * Los videojuegos tendrán un ID, un nombre, una compañía, una año y una nota.
  * 
- * @author Jorge
+ * @author Jorge, Adrian, Antonio
  *
  */
 
